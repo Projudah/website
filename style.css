@@ -57,7 +57,7 @@
 	}
 }
 
-@media (max-width: 600px){
+@media handheld,(max-width: 600px){
 	html{
 		background: url("bg.jpg");
 		background-size: cover;
