@@ -1,55 +1,119 @@
-html{
-	background: url("bg.jpg");
-	background-size: cover;
+@media (min-width: 600px){
+
+	html{
+		background: url("bg.jpg");
+		background-size: cover;
+	}
+
+	@font-face {
+		font-family: head;
+		src: url(adamwarrenpro.woff);
+	}
+
+	.head{
+		font-family: head;
+		text-align: center;
+		font-size: 6em;
+		color: white;
+		margin: 50px 0px 0px 0px;
+		text-shadow: -7px 5px #000;
+	}
+
+	.notification{
+		font-family: head;
+		font-size: 20px;
+		color: white;
+		padding: 10px;
+		height: 200px;
+		margin: 0px 10%;
+		background-color: #666;
+		opacity: 0.6;
+		border-radius: 5px;
+		box-shadow: -7px 5px #000;
+	}
+	.buttons{
+		text-align: center;
+	}
+	li{
+		display: inline-block;
+		list-style: none;
+		margin: 5px 35px;
+		font-family: head;
+		font-size: 3em;
+		border-radius: 5px;
+		color: white;
+		width: 200px;
+		font-weight: lighter;
+		box-shadow: -7px 5px #000;
+	}
+	#Music{
+		background-color: #666;
+	}
+	#Art{
+		background-color: red;
+	}
+	#Games{
+		background-color: green;
+	}
 }
 
-@font-face {
-    font-family: head;
-    src: url(adamwarrenpro.woff);
-}
+@media (max-width: 600px){
+	html{
+		background: url("bg.jpg");
+		background-size: cover;
+	}
+	body{
+		font-size: 3em;
+	}
 
-.head{
-	font-family: head;
-	text-align: center;
-	font-size: 6em;
-	color: white;
-	margin: 50px 0px 0px 0px;
-	text-shadow: -7px 5px #000;
-}
+	@font-face {
+		font-family: head;
+		src: url(adamwarrenpro.woff);
+	}
 
-.notification{
-	font-family: head;
-	font-size: 20px;
-	color: white;
-	padding: 10px;
-	height: 200px;
-	margin: 0px 10%;
-	background-color: #666;
-	opacity: 0.6;
-	border-radius: 5px;
-	box-shadow: -7px 5px #000;
-}
-.buttons{
-	text-align: center;
-}
-li{
-	display: inline-block;
-	list-style: none;
-	margin: 5px 35px;
-	font-family: head;
-	font-size: 3em;
-	border-radius: 5px;
-	color: white;
-	width: 200px;
-	font-weight: lighter;
-	box-shadow: -7px 5px #000;
-}
-#Music{
-	background-color: #666;
-}
-#Art{
-	background-color: red;
-}
-#Games{
-	background-color: green;
+	.head{
+		font-family: head;
+		text-align: center;
+		font-size: 3em;
+		color: white;
+		margin: 50px 0px 0px 0px;
+		text-shadow: -7px 5px #000;
+	}
+
+	.notification{
+		font-family: head;
+		font-size: 40px;
+		color: white;
+		padding: 10px;
+		height: 400px;
+		margin: 0px 10%;
+		background-color: #666;
+		opacity: 0.6;
+		border-radius: 5px;
+		box-shadow: -7px 5px #000;
+	}
+	.buttons{
+		text-align: center;
+	}
+	li{
+		display: inline-block;
+		list-style: none;
+		margin: 5px 35px;
+		font-family: head;
+		font-size: 3em;
+		border-radius: 5px;
+		color: white;
+		width: 500px;
+		font-weight: lighter;
+		box-shadow: -7px 5px #000;
+	}
+	#Music{
+		background-color: #666;
+	}
+	#Art{
+		background-color: red;
+	}
+	#Games{
+		background-color: green;
+	}
 }
