@@ -1,4 +1,4 @@
-@media (min-width: 2000px){
+@media (min-width: 800px){
 
 	html{
 		background: url("bg.jpg");
@@ -57,7 +57,7 @@
 	}
 }
 
-@media handheld, screen and (max-width: 2000px){
+@media handheld, screen and (max-width: 800px){
 	html{
 		background: url("bg.jpg");
 		background-size: cover;
