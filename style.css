@@ -57,7 +57,7 @@
 	}
 }
 
-@media handheld, screen and (max-width: 800px){
+@media handheld{
 	html{
 		background: url("bg.jpg");
 		background-size: cover;
