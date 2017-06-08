@@ -11,7 +11,7 @@
 	}
 
 	.head{
-		font-family: head;
+		font-family: "head";
 		text-align: center;
 		font-size: 6em;
 		color: white;
@@ -20,7 +20,7 @@
 	}
 
 	.notification{
-		font-family: head;
+		font-family: "head";
 		font-size: 20px;
 		color: white;
 		padding: 10px;
@@ -38,7 +38,7 @@
 		display: inline-block;
 		list-style: none;
 		margin: 5px 35px;
-		font-family: head;
+		font-family: "head";
 		font-size: 3em;
 		border-radius: 5px;
 		color: white;
@@ -47,13 +47,13 @@
 		box-shadow: -7px 5px #000;
 	}
 	#Music{
-		background-color: #666;
+		background-color: #606060;
 	}
 	#Art{
-		background-color: red;
+		background-color: #7a2727;
 	}
 	#Games{
-		background-color: green;
+		background-color: #287a27;
 	}
 }
 
@@ -63,16 +63,16 @@
 		background-size: cover;
 	}
 	body{
-		font-size: 3em;
+		font-size: 20px;
 	}
 
 	@font-face {
-		font-family: head;
+		font-family: "head";
 		src: url(adamwarrenpro.woff);
 	}
 
 	.head{
-		font-family: head;
+		font-family: "head";
 		text-align: center;
 		font-size: 3em;
 		color: white;
@@ -81,7 +81,7 @@
 	}
 
 	.notification{
-		font-family: head;
+		font-family: "head";
 		font-size: 40px;
 		color: white;
 		padding: 10px;
@@ -99,7 +99,7 @@
 		display: inline-block;
 		list-style: none;
 		margin: 5px 35px;
-		font-family: head;
+		font-family: "head";
 		font-size: 3em;
 		border-radius: 5px;
 		color: white;
@@ -108,12 +108,12 @@
 		box-shadow: -7px 5px #000;
 	}
 	#Music{
-		background-color: #666;
+		background-color: #606060;
 	}
 	#Art{
-		background-color: red;
+		background-color: #7a2727;
 	}
 	#Games{
-		background-color: green;
+		background-color: #287a27;
 	}
 }
