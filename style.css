@@ -39,6 +39,9 @@
 		opacity: 0.9;
 		border-radius: 20px;
 	}
+	a{
+		text-decoration: none;
+	}
 	.buttons{
 		text-align: center;
 	}
@@ -106,19 +109,24 @@
 		border-radius: 20px;
 	}
 	.buttons{
+	}
+	.buttons_ul{
 		text-align: center;
+		margin: 0px;
+		padding: 0px;
+	}
+	a{
+		text-decoration: none;
 	}
 	li{
-		display: inline-block;
+		text-decoration: none;
 		list-style: none;
-		margin: 5px 35px;
+		margin: 5px 0px;
 		font-family: "head";
 		font-size: 4em;
 		border-radius: 5px;
 		color: white;
-		width: 300px;
-		font-weight: lighter;
-		box-shadow: -7px 5px #000;
+		width: 100%;
 	}
 	#Music{
 		background-color: #606060;
