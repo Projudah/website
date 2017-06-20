@@ -8,7 +8,7 @@
 	<div class = "bg">
 		<p class="head">PRO</p>
 		<div class="notification">
-			<p>Hey Cath, Progress is made, i listened to the Love story song <br> its Great</p>
+			<p>Are You In School Now Human?</p>
 		</div>
 	</div>
 	<div class = "buttons">
