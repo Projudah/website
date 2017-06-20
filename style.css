@@ -2,18 +2,18 @@
 
 	html{
 		background: url("bg.jpg");
-		background-size: cover;
+		background-size: auto;
 	}
 
 	@font-face {
 		font-family: "head";
-		src: url(adamwarrenpro.woff);
-	}
+		src: url(font.woff);	}
 
 	.head{
 		font-family: "head";
 		text-align: center;
 		font-size: 6em;
+		font-weight: 900;
 		color: white;
 		margin: 50px 0px 0px 0px;
 		text-shadow: -7px 5px #000;
@@ -60,21 +60,19 @@
 @media handheld, screen and (max-width: 995px ) {
 	html{
 		background: url("bg.jpg");
-		background-size: cover;
-	}
-	body{
-		font-size: 20px;
+		background-size: auto;
+
 	}
 
 	@font-face {
 		font-family: "head";
-		src: url(adamwarrenpro.woff);
-	}
+		src: url(font.woff);	}
 
 	.head{
 		font-family: "head";
 		text-align: center;
-		font-size: 3em;
+		font-size: 6em;
+		font-weight: 900;
 		color: white;
 		margin: 50px 0px 0px 0px;
 		text-shadow: -7px 5px #000;
