@@ -21,9 +21,8 @@ html{
 .albulm_art{
 	font-family: "head";
 	font-size: 20px;
-	background: url("art.jpg");
 	background-size: cover;
-	margin: 0px;
+	margin: 30px 0px;
 	min-height: wrap;
 	border-radius: 10px;
 	text-align: left;
@@ -35,4 +34,8 @@ html{
 	color: white;
 	margin: 10px;
 	font-size: 2em;
+	font-weight: 900;
+}
+.songs{
+	color: white;
 }
