@@ -16,6 +16,10 @@
 		font-family: "head";
 		src: url(font.woff);
 	}
+	@font-face {
+		font-family: "notify";
+		src: url(notify.woff);
+	}
 
 	.head{
 		font-family: "head";
@@ -29,14 +33,14 @@
 	}
 
 	.notification{
-		font-family: "head";
-		font-size: 20px;
-		color: white;
-		padding: 50px;
-		height: 200px;
+		font-family: "notify";
+		font-size: 8em;
+		color: #2d1633;
+		padding: 20px 0px;
+		height: auto;
 		margin: 0px;
-		background-color: #111;
-		opacity: 0.9;
+		background: linear-gradient(rgba(190, 96, 214, 0.3), rgba(190, 96, 214, 0.5)), url(notification.jpg);
+		background-size: cover;
 		border-radius: 20px;
 		text-align: center;
 	}
@@ -79,6 +83,10 @@
 		font-family: "head";
 		src: url(font.woff);
 	}
+	@font-face {
+		font-family: "notify";
+		src: url(notify.woff);
+	}
 
 	.bg{
 		background: url("bg.jpg");
@@ -99,14 +107,14 @@
 	}
 
 	.notification{
-		font-family: "head";
-		font-size: 30px;
-		color: white;
-		padding: 50px;
-		height: 200px;
+		font-family: "notify";
+		font-size: 7em;
+		color: #2d1633;
+		padding: 20px 0px;
+		height: auto;
 		margin: 0px;
-		background-color: #111;
-		opacity: 0.9;
+		background: linear-gradient(rgba(190, 96, 214, 0.3), rgba(190, 96, 214, 0.5)), url(notification.jpg);
+		background-size: cover;
 		border-radius: 20px;
 		text-align: center;
 	}

@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Home Page</title>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="mstyle.css">
 </head>
 <body>
+	<?php
+	if(isset($_GET['view']))
+		$view = $_GET['view'];
+	else($view = 'albulm');
+	?>
 	<div class = "bg">
-		<p class="head">PRO</p>
-		<div class="notification">
-			<p>BOE coming SOON</p>
+		<p class="head"><a href="..">PRO music</a></p>
+		<div class = "bar">
+			<ul class = "barul">
+				<form action = "index.php" method="get">
+					<a href="?view=albulm"><li class = <?php  if($view == "albulm"){ echo 'baractive'; }else{ echo 'barinactive'; }?>>Albulms</li></a>
+					<a href="?view=all"><li class=<?php  if($view == "all"){ echo 'baractive'; }else{ echo 'barinactive'; }?>>All Songs</li></a>
+					<a href="?view=instrument"><li class=<?php  if($view == "instrument"){ echo 'baractive'; }else{ echo 'barinactive'; }?>>Instrumentals</li></a>
+				</form>
+			</ul></div>
+			<?php
+			if($view == "albulm"){
+				include 'albulm.php';
+			}
+			if($view == "all"){
+				include 'all.php';
+			}
+			if($view == "instrument"){
+				include 'instrument.php';
+			}
+			?>
 		</div>
-	</div>
-	<div class = "buttons">
-		<ul class = "buttons_ul">
-			<a href="games"><li id="Games">Games</li></a>
-			<a href="music"><li id="Music">Music</li></a>
-			<a href="art"><li id="Art">Art</li></a>
-		</ul>
-	</div>
-</body>
-</html>
+	</body>
+	</html>
