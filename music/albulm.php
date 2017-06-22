@@ -12,7 +12,7 @@
 		echo '">
 		<div class="title">'.
 			basename($file, ".txt")
-			.'<button class= "expand" onclick = "expand(this,'; echo "'".basename($file, ".txt")."'"; echo ')">-</button></div>
+			.'<button class= "expand" onclick = "expand(this,'; echo "'".basename($file, ".txt")."'"; echo ')">+</button></div>
 			<div class ="songs" id = "'.basename($file, ".txt").'">';
 				$myfile = fopen($file, "r") or die("Unable to open file!");
 				while(!feof($myfile)) {

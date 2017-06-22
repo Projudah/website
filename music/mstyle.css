@@ -1,8 +1,8 @@
 body{
-		background-color: #111;
-		padding: 0px;
-		margin: 0px;
-	}
+	background-color: #111;
+	padding: 0px;
+	margin: 0px;
+}
 .bg{
 	margin: 0px;
 	padding: 10px;
@@ -49,6 +49,7 @@ body{
 	background-color: rgba(1,1,1,0.5);
 	padding: 5px 10px;
 	border-radius: 10px;
+	display: none;
 }
 
 #download{
@@ -71,4 +72,39 @@ body{
 	text-decoration: none;
 	border: none;
 	color: white
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+li{
+	display: inline-block;
+	list-style: none;
+	margin: 5px 0px;
+	font-size: 2em;
+	border-radius: 5px;
+	width: 220px;
+}
+li:hover{
+	background: #555;
+	color: white;
+}
+.bar{
+	background: rgba(1,1,1,0.5);
+	padding: 5px;
+	border-radius: 10px;
+}
+.barul{
+	font-family: "head";
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+.baractive{
+	background: white;
+	color: black;
+}
+.barinactive{
+	background: #111;
+	color: white;
 }
