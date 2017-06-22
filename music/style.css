@@ -1,0 +1,150 @@
+@media (min-width: 995px){
+
+	body{
+		background-color: #111;
+		padding: 0px;
+		margin: 0px;
+	}
+	.bg{
+		background: url("bg.jpg");
+		margin: 0px;
+		padding: 50px 0px;
+		height: auto;
+	}
+
+	@font-face {
+		font-family: "head";
+		src: url(font.woff);
+	}
+	@font-face {
+		font-family: "notify";
+		src: url(notify.woff);
+	}
+
+	.head{
+		font-family: "head";
+		text-align: center;
+		font-size: 8em;
+		font-weight: 900;
+		color: white;
+		padding: 150px 0px;
+		margin: 0px;
+		text-shadow: -12px 10px #222;
+	}
+
+	.notification{
+		font-family: "notify";
+		font-size: 8em;
+		color: #2d1633;
+		padding: 20px 0px;
+		height: auto;
+		margin: 0px;
+		background: linear-gradient(rgba(190, 96, 214, 0.3), rgba(190, 96, 214, 0.5)), url(notification.jpg);
+		background-size: cover;
+		border-radius: 20px;
+		text-align: center;
+	}
+	a{
+		text-decoration: none;
+	}
+	.buttons{
+		text-align: center;
+	}
+	li{
+		display: inline-block;
+		list-style: none;
+		margin: 5px 35px;
+		font-family: "head";
+		font-size: 3em;
+		border-radius: 5px;
+		color: white;
+		width: 200px;
+		font-weight: lighter;
+	}
+	#Music{
+		background-color: #606060;
+	}
+	#Art{
+		background-color: #7a2727;
+	}
+	#Games{
+		background-color: #287a27;
+	}
+}
+
+@media handheld, screen and (max-width: 995px ) {
+	body{
+		background-color: #111;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	@font-face {
+		font-family: "head";
+		src: url(font.woff);
+	}
+	@font-face {
+		font-family: "notify";
+		src: url(notify.woff);
+	}
+
+	.bg{
+		background: url("bg.jpg");
+		margin: 0px;
+		padding: 50px 0px;
+		height: 900px;
+	}
+
+	.head{
+		font-family: "head";
+		text-align: center;
+		font-size: 8em;
+		font-weight: 900;
+		color: white;
+		padding: 100px 0px;
+		margin: 0px;
+		text-shadow: -12px 10px #222;
+	}
+
+	.notification{
+		font-family: "notify";
+		font-size: 7em;
+		color: #2d1633;
+		padding: 20px 0px;
+		height: auto;
+		margin: 0px;
+		background: linear-gradient(rgba(190, 96, 214, 0.3), rgba(190, 96, 214, 0.5)), url(notification.jpg);
+		background-size: cover;
+		border-radius: 20px;
+		text-align: center;
+	}
+	.buttons{
+	}
+	.buttons_ul{
+		text-align: center;
+		margin: 0px;
+		padding: 0px;
+	}
+	a{
+		text-decoration: none;
+	}
+	li{
+		text-decoration: none;
+		list-style: none;
+		margin: 5px 0px;
+		font-family: "head";
+		font-size: 6em;
+		border-radius: 5px;
+		color: white;
+		width: 100%;
+	}
+	#Music{
+		background-color: #606060;
+	}
+	#Art{
+		background-color: #7a2727;
+	}
+	#Games{
+		background-color: #287a27;
+	}
+}
