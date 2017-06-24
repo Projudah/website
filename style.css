@@ -61,6 +61,7 @@
 		color: white;
 		width: 200px;
 		font-weight: lighter;
+		text-shadow: -5px 5px #222;
 	}
 	#Music{
 		background-color: #606060;
@@ -139,6 +140,7 @@
 		border-radius: 5px;
 		color: white;
 		width: 100%;
+		text-shadow: -5px 5px #222;
 	}
 	#Music{
 		background-color: #606060;

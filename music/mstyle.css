@@ -108,6 +108,62 @@
 		background: #111;
 		color: white;
 	}
+	.all{
+		font-family: "head";
+	}
+	.one{
+		color: white;
+		background-color: rgba(1,1,1,0.5);
+		padding: 5px 15px;
+		border-radius: 10px;
+		overflow: auto;
+		margin: 5px;
+	}
+	.allbutt{
+		float: right;
+		margin: 0px 5px;
+		background: #111;
+		border-radius: 5px;
+		width: 100px;
+		padding: 1px 5px;
+		font-size: 20px;
+		text-align: center;
+		float: right;
+		color: white;
+	}
+	.onesong{
+		float: left;
+		margin: 0px;
+		font-size: 2em;
+	}
+	.player{
+		float: right;
+		margin: 0px 5px;
+		display: none;
+		width: 40%;
+	}
+	.abs{
+		position: fixed;
+		bottom: 0px;
+		font-family: "head";
+		background: white;
+		width: 100%;
+		text-align: center;
+		font-size: 20px;
+		margin: 0px;
+		border-radius: 5px;
+		padding: 10px;
+	}
+	#redownload{
+		background: #111;
+		border-radius: 5px;
+		width: 100px;
+		padding: 1px 5px;
+		font-size: 25px;
+		text-align: center;
+		color: white;
+		margin: auto;
+	}
 }
 @media handheld, screen and (max-width: 995px ) {
 	body{
@@ -220,5 +276,61 @@
 	.barinactive{
 		background: #111;
 		color: white;
+	}
+	.all{
+		font-family: "head";
+	}
+	.abs{
+		position: fixed;
+		bottom: 0px;
+		font-family: "head";
+		background: white;
+		width: 100%;
+		text-align: center;
+		font-size: 30px;
+		margin: 0px;
+		border-radius: 5px;
+		padding: 10px;
+	}
+	#redownload{
+		background: #111;
+		border-radius: 5px;
+		width: 100px;
+		padding: 1px 5px;
+		font-size: 30px;
+		text-align: center;
+		color: white;
+		margin: auto;
+	}
+	.one{
+		color: white;
+		background-color: rgba(1,1,1,0.5);
+		padding: 5px 15px;
+		border-radius: 10px;
+		overflow: auto;
+		margin: 5px;
+	}
+	.allbutt{
+		float: right;
+		margin: 0px 5px;
+		background: #111;
+		border-radius: 5px;
+		width: 100px;
+		padding: 5px 8px;
+		font-size: 25px;
+		text-align: center;
+		float: right;
+		color: white;
+	}
+	.onesong{
+		float: left;
+		margin: 0px;
+		font-size: 2em;
+	}
+	.player{
+		float: left;
+		margin: 5px 5px;
+		display: none;
+		width: 40%;
 	}
 }

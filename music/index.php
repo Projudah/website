@@ -32,5 +32,6 @@
 			}
 			?>
 		</div>
+		<script type="text/javascript" src="mjs.js"></script>
 	</body>
 	</html>
