@@ -10,7 +10,12 @@
 		foreach ($albs as $alb) {
 			$files = glob($alb."/*.mp3");
 			foreach ($files as $file) {
-				echo '<div class="one">';
+				echo '<div class="';
+				if (file_exists( $alb."/".basename($file,".mp3").".good") ){
+					echo 'goodone">';
+				}else{
+					echo 'one">';
+				}
 				echo '<p class = "onesong">'.basename($file, '.mp3').'</p>';
 				echo '<p class = "allbutt"><a href = "all/'.$file.'" download>Download</a></p>';
 				echo '<p class = "allbutt" onclick = "'; echo "play(this, '".$file."')"; echo '">Play</p>';
