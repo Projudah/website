@@ -11,8 +11,10 @@ function expand(el, string){
 }
 
 function play(el,string) {
+	var i;
 	var all = document.getElementsByClassName("player");
-	for(var elem in all){
+	for(i=0; i< all.length; i++){
+		var elem = all[i];
 		elem.style.display = "none";
 	document.getElementById("nowplaying").style.background = 		"black";
 		document.getElementById("nowplaying").innerHTML = 			"Play";
