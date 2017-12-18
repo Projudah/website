@@ -19,12 +19,6 @@ function play(el,string) {
 		div.pause();
 		div.currentTime = 0;
 	}else{
-		div.style.display = "block";
-		el.style.background = "#555";
-		el.innerHTML = "Stop"
-		el.id = "nowplaying";
-		div.play();
-	}
 	var i;
 	var all = document.getElementsByClassName("player");
 	for(i=0; i< all.length; i++){
@@ -39,6 +33,12 @@ function play(el,string) {
 			elem.pause();
 			elem.currentTime = 0;
 		}
+	}
+		div.style.display = "block";
+		el.style.background = "#555";
+		el.innerHTML = "Stop"
+		el.id = "nowplaying";
+		div.play();
 	}
 }
 
