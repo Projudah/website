@@ -11,7 +11,7 @@ function expand(el, string){
 }
 
 function play(el,string) {
-	var all = document.getElementsByClass("player");
+	var all = document.getElementsByClassName("player");
 	for(var elem in all){
 		elem.style.display = "none";
 	document.getElementById("nowplaying").style.background = 		"black";
