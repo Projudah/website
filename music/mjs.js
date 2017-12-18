@@ -11,20 +11,6 @@ function expand(el, string){
 }
 
 function play(el,string) {
-	var i;
-	var all = document.getElementsByClassName("player");
-	for(i=0; i< all.length; i++){
-		var elem = all[i];
-		elem.style.display = "none";
-		if(document.getElementById("nowplaying") != null){
-			document.getElementById("nowplaying").style.background = "black";
-			document.getElementById("nowplaying").innerHTML = "Play";
-			document.getElementById("nowplaying").id="";
-		}
-		elem.pause();
-		elem.currentTime = 0;
-	}
-
 	var div = document.getElementById(string);
 	if(div.style.display == "block"){
 		div.style.display = "none";
@@ -38,6 +24,21 @@ function play(el,string) {
 		el.innerHTML = "Stop"
 		el.id = "nowplaying";
 		div.play();
+	}
+	var i;
+	var all = document.getElementsByClassName("player");
+	for(i=0; i< all.length; i++){
+		var elem = all[i];
+		if(elem != div){
+			elem.style.display = "none";
+			if(document.getElementById("nowplaying") != null){
+				document.getElementById("nowplaying").style.background = "black";
+				document.getElementById("nowplaying").innerHTML = "Play";
+				document.getElementById("nowplaying").id="";
+			}
+			elem.pause();
+			elem.currentTime = 0;
+		}
 	}
 }
 
