@@ -11,6 +11,16 @@ function expand(el, string){
 }
 
 function play(el,string) {
+	var all = document.getElementsByClass("player");
+	for(var elem in all){
+		var.style.display = "none";
+	document.getElementById("nowplaying").style.background = 		"black";
+		document.getElementById("nowplaying").innerHTML = 			"Play";
+		var.pause();
+		var.currentTime = 0;
+		document.getElementById("nowplaying").id="";
+	}
+
 	var div = document.getElementById(string);
 	if(div.style.display == "block"){
 		div.style.display = "none";
@@ -22,6 +32,7 @@ function play(el,string) {
 		div.style.display = "block";
 		el.style.background = "#555";
 		el.innerHTML = "Stop"
+		el.id = "nowplaying";
 		div.play();
 	}
 }
