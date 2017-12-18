@@ -16,11 +16,13 @@ function play(el,string) {
 	for(i=0; i< all.length; i++){
 		var elem = all[i];
 		elem.style.display = "none";
-	document.getElementById("nowplaying").style.background = 		"black";
-		document.getElementById("nowplaying").innerHTML = 			"Play";
+		if(document.getElementById("nowplaying") != null){
+			document.getElementById("nowplaying").style.background = "black";
+			document.getElementById("nowplaying").innerHTML = "Play";
+			document.getElementById("nowplaying").id="";
+		}
 		elem.pause();
 		elem.currentTime = 0;
-		document.getElementById("nowplaying").id="";
 	}
 
 	var div = document.getElementById(string);
