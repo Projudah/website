@@ -26,11 +26,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/music',musicRouter);
-app.use('/art',artRouter);
-app.use('/games',gamesRouter);
-app.use('/shop',shopRouter);
+app.get('/users', usersRouter);
+app.get('/music',musicRouter);
+app.get('/art',artRouter);
+app.get('/games',gamesRouter);
+app.get('/shop',shopRouter);
 
 
 
