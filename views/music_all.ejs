@@ -1,0 +1,51 @@
+<div class='section padcenter'>
+	<div class="section_title">New And Promoted</div>
+	<% for(var song in allsongs['Promotions']){%>
+		<%-"<div class='song'><div class='name'>"%>
+		<%= song%>
+		<%-"</div><div class='button2 play' onclick='start("%><%='"div_'+allsongs['Promotions'][song].id+'",'%><%='"'+allsongs['Promotions'][song].id+'"'%>
+		<%-",this);'>Play</div>"%>
+		<%-"<div class='button2' onclick ='location.href="%><%='"'+allsongs['Promotions'][song].link+'"'%><%-"'>Download</div>"%>
+		<%-"<div class='audio' id = "%><%-'"div_'+allsongs['Promotions'][song].id+'"'%><%-">"%>
+		<%-"<audio class='audio_control' id = "%><%-'"'+allsongs['Promotions'][song].id+'"'%><%-" controls autoplay src=''>"%>
+		<%=allsongs['Promotions'][song].link%><%-"</audio></div>"%>
+		<%-"</div>"%>
+	<%}
+		%>
+	</div>
+<div class='section padcenter'>
+	<div class="section_title">Songs I Like</div>
+	<% for(var alb in liked){%>
+		<%-"<div class='song'><div class='name'>"%>
+		<%= liked[alb]%>
+		<%-"</div><div class='button2 play' onclick='start("%><%='"div_'+allsongs[alb][liked[alb]].id+'",'%><%='"'+allsongs[alb][liked[alb]].id+'"'%>
+		<%-",this);'>Play</div>"%>
+		<%-"<div class='button2' onclick ='location.href="%><%='"'+allsongs[alb][liked[alb]].link+'"'%><%-"'>Download</div>"%>
+		<%-"<div class='audio' id = "%><%-'"div_'+allsongs[alb][liked[alb]].id+'"'%><%-">"%>
+		<%-"<audio class='audio_control' id = "%><%-'"'+allsongs[alb][liked[alb]].id+'"'%><%-" controls autoplay src=''>"%>
+		<%=allsongs[alb][liked[alb]].link%><%-"</audio></div>"%>
+		<%-"</div>"%>
+	<%}
+		%>
+</div>
+	<div class='section padcenter'>
+		<div class="section_title">All Songs</div>
+			<% 
+			var allkeys = Object.keys(allsongs);
+			allkeys.sort()
+			for(var alb in allkeys){
+				var albkeys = Object.keys(allsongs[allkeys[alb]])
+				albkeys.sort()
+				for(var song in albkeys){%>
+					<%-"<div class='song'><div class='name'>"%>
+					<%= albkeys[song]%>
+					<%-"</div><div class='button2 play' onclick='start("%><%='"div_'+allsongs[allkeys[alb]][albkeys[song]].id+'",'%><%='"'+allsongs[allkeys[alb]][albkeys[song]].id+'"'%>
+					<%-",this);'>Play</div>"%>
+					<%-"<div class='button2' onclick ='location.href="%><%='"'+allsongs[allkeys[alb]][albkeys[song]].link+'"'%><%-"'>Download</div>"%>
+					<%-"<div class='audio' id = "%><%-'"div_'+allsongs[allkeys[alb]][albkeys[song]].id+'"'%><%-">"%>
+					<%-"<audio class='audio_control' id = "%><%-'"'+allsongs[allkeys[alb]][albkeys[song]].id+'"'%><%-" controls autoplay src=''>"%>
+					<%=allsongs[allkeys[alb]][albkeys[song]].link%><%-"</audio></div>"%>
+					<%-"</div>"%>
+				<%}
+			}%>
+	</div>

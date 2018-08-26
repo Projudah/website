@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pro Music</title>
+	<link rel='stylesheet' href='/stylesheets/music.css' />
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+	<div class= 'topbar'>
+		<div id='color_bg'>
+			<div class = 'color_all' id='color_1'></div><div class = 'color_all' id='color_2'></div><div class = 'color_all' id='color_3'></div><div class = 'color_all' id='color_4'></div>
+		</div>
+		<div class='home' onclick="location.href='/';">Go Home</div>
+	</div>
+	<div class='navi_bar'>
+		<div class='splash'></div>
+		<div class = 'main_button <%if(query.view =="all" || query.view==null){%><%="selected"%><%}%>' id='all' onclick="location.href='?view=all';">All Songs</div>
+		<div class = 'main_button <%if(query.view =="album"){%><%="selected"%><%}%>' id='albums' onclick="location.href='?view=album';">Albums</div>
+	</div>
+	<%
+	if(query.view != null){
+		if(query.view == 'all'){
+			%><%-include('music_all')%><%
+		}
+		else if(query.view == 'album'){
+			%><%-include('music_album',{arts: arts})%><%
+		}
+	}else if(query.album != null){
+			%><%-include('music_promo')%><%
+	}else{
+		%><%-include('music_all')%><%
+	}
+	%>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		function start(div_id, music_id,me){
+			var div = document.getElementById(div_id)
+			var tag = document.getElementById(music_id)
+			if(me.innerHTML == 'Play'){
+				stop()
+				me.innerHTML = 'Stop'
+				tag.src = tag.innerHTML
+				show(div)
+				tag.play()
+			}else{
+				stop()
+				me.innerHTML = 'Play'
+			}
+		}
+		function show(elem){
+			var id = setInterval(showNext, 5);
+			function showNext(){
+				elem.style.display = 'block'
+				if(parseInt(elem.style.height) == 70 ){
+					clearInterval(id)
+				}else{
+					elem.style.height = (parseInt(elem.style.height)+1) + "px"
+				}
+			}
+		}
+		function hide(elem){
+			var id = setInterval(hideNext, 5);
+			function hideNext(){
+				if(parseInt(elem.style.height) == 0){
+					elem.style.display = 'none'
+					clearInterval(id)
+				}else{
+					elem.style.height = (parseInt(elem.style.height)-1) + "px"
+				}
+			}
+		}
+		function stop(){
+			var all = document.getElementsByClassName('audio_control')
+			var all_div = document.getElementsByClassName('audio')
+			var all_play = document.getElementsByClassName('play')
+			for(var elem=0;elem<all_div.length; elem++){
+				all[elem].src = ""
+			}
+			for(var elem=0;elem<all_div.length; elem++){
+				if(all_div[elem].style.height == '')all_div[elem].style.height='0px'
+					hide(all_div[elem])
+			}
+			for(var elem=0;elem<all_play.length; elem++){
+				all_play[elem].innerHTML = "Play"
+			}
+		}
+	</script>
+</body>
+</html>

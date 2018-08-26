@@ -1,0 +1,27 @@
+<% 
+var allkeys = Object.keys(allsongs);
+allkeys.sort()
+for(var alb in allkeys){
+	var albkeys = Object.keys(allsongs[allkeys[alb]])
+	albkeys.sort()%>
+	<%-"<div class='section center'>"%>
+	<%-"<div class='art' style='background-image: url("%>
+		<%='"'+arts[allkeys[alb]]+'"'%>
+		<%-")'><div class='button3' onclick ='location.href="%><%='"?album='+allkeys[alb]+'"'%><%-"'>View Album</div></div>"%>
+	<%-"<div class='album_list'>"%>
+		<%-"<div class='section_title'>"%>
+			<%= allkeys[alb]%>
+		<%-"</div>"%>
+	<%for(var song in albkeys){%>
+		<%-"<div class='song'><div class='name'>"%>
+		<%= albkeys[song]%>
+		<%-"</div><div class='button2 play' onclick='start("%><%='"div_'+allsongs[allkeys[alb]][albkeys[song]].id+'",'%><%='"'+allsongs[allkeys[alb]][albkeys[song]].id+'"'%>
+		<%-",this);'>Play</div>"%>
+		<%-"<div class='button2' onclick ='location.href="%><%='"'+allsongs[allkeys[alb]][albkeys[song]].link+'"'%><%-"'>Download</div>"%>
+		<%-"<div class='audio' id = "%><%-'"div_'+allsongs[allkeys[alb]][albkeys[song]].id+'"'%><%-">"%>
+		<%-"<audio class='audio_control' id = "%><%-'"'+allsongs[allkeys[alb]][albkeys[song]].id+'"'%><%-" controls autoplay src=''>"%>
+		<%=allsongs[allkeys[alb]][albkeys[song]].link%><%-"</audio></div>"%>
+		<%-"</div>"%>
+	<%}%>
+	<%-"</div></div>"%>
+<%}%>

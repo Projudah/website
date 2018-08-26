@@ -1,0 +1,20 @@
+<%-"<div class='section center'>"%>
+	<%-"<div class='art' style='background-image: url("%>
+		<%='"'+arts[query.album]+'"'%>
+		<%-")'></div>"%>
+	<%-"<div class='album_list'>"%>
+		<%-"<div class='section_title'>"%>
+			<%= query.album%>
+		<%-"</div>"%>
+	<%for(var song in allsongs[query.album]){%>
+		<%-"<div class='song'><div class='name'>"%>
+		<%= song%>
+		<%-"</div><div class='button2 play' onclick='start("%><%='"div_'+allsongs[query.album][song].id+'",'%><%='"'+allsongs[query.album][song].id+'"'%>
+		<%-",this);'>Play</div>"%>
+		<%-"<div class='button2' onclick ='location.href="%><%='"'+allsongs[query.album][song].link+'"'%><%-"'>Download</div>"%>
+		<%-"<div class='audio' id = "%><%-'"div_'+allsongs[query.album][song].id+'"'%><%-">"%>
+		<%-"<audio class='audio_control' id = "%><%-'"'+allsongs[query.album][song].id+'"'%><%-" controls autoplay src=''>"%>
+		<%=allsongs[query.album][song].link%><%-"</audio></div>"%>
+		<%-"</div>"%>
+	<%}%>
+	<%-"</div></div>"%>
