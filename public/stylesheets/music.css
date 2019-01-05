@@ -7,6 +7,8 @@
 	padding: 0px 10px;
 	cursor: pointer;
 	border-left: 5px solid white;
+	-webkit-transition: background 1s;
+	-o-transition: background 1s;
 	transition: background 1s;
 }
 .home:hover{
@@ -79,6 +81,8 @@
 	cursor: pointer;
 	z-index: 2;
 	color: black;
+	-webkit-transition: background 1s;
+	-o-transition: background 1s;
 	transition: background 1s;
 }
 .main_button:hover{
@@ -125,6 +129,8 @@
 	padding: 0px 5px;
 	color: white;
 	cursor: pointer;
+	-webkit-transition: background 1s;
+	-o-transition: background 1s;
 	transition: background 1s;
 }
 .button2:hover{
@@ -139,6 +145,8 @@
 	color: black;
 	cursor: pointer;
 	background: white;
+	-webkit-transition: background 1s;
+	-o-transition: background 1s;
 	transition: background 1s;
 	position: absolute;
 	bottom: 0;

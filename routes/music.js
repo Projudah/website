@@ -11,7 +11,7 @@ var dbx = new Dropbox({ accessToken: 'g5mN7FJWjWcAAAAAAAAB-UR269yEvz6MOO-Wrsc6U4
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	getParams(function(resp,arts){
-		console.log("LIST COMPLETE...")
+		//console.log("LIST COMPLETE...")
 		getLiked(function(list){
 			res.render('music',{query: req.query, allsongs: resp, liked:list, arts: arts});
 		})
@@ -24,7 +24,7 @@ function getLiked(callback){
 	.then(function(response){
 		request.get(response.link, function (error, response, body) {
 			if (!error && response.statusCode == 200) {
-				console.log('liked gotten');
+				//console.log('liked gotten');
 				var likedlist = JSON.parse(body);
 				callback(likedlist)
 			}
@@ -39,34 +39,34 @@ function getParams(callback){//add callback!!!
 	console.log("starting...")
 	dbx.filesGetTemporaryLink({path: '/music/songlist.txt'})
 	.then(function(response){
-		console.log('link is gotten...')
+		//console.log('link is gotten...')
 		request.get(response.link, function (error, response, body) {
 			if (!error && response.statusCode == 200) {
-				console.log('contents is gootten saved lib');
+				//console.log('contents is gootten saved lib');
 				var songlist = JSON.parse(body);
 				if(songlist.date == null){
-					console.log('songlist.date is null, calling Getlist')
+					//console.log('songlist.date is null, calling Getlist')
 					var thisdate = new Date().getHours()
 					getlist(thisdate, function(list,arts){
-						console.log('Get list done, list is: '+list);
+						//console.log('Get list done, list is: '+list);
 						callback(list,arts)
 					})
 				}else{
-					console.log('songlist.date is not null its: '+songlist.date);
+					//console.log('songlist.date is not null its: '+songlist.date);
 					var thisdate = new Date().getHours()
 					var diff = thisdate - songlist.date
 					if(diff < 0){
 						diff = 24-diff
 					}
 					if(diff > 3){
-						console.log('calling getlist diff is > 3, it is: '+diff);
+						//console.log('calling getlist diff is > 3, it is: '+diff);
 						getlist(thisdate,function(list,arts){
-							console.log('Get list done, list is: '+list);
+							//console.log('Get list done, list is: '+list);
 							callback(list,arts)
 						})
 					}else{
-						console.log('no need, diff is < 3, it is: '+diff);
-						console.log(songlist.arts)
+						//console.log('no need, diff is < 3, it is: '+diff);
+						//console.log(songlist.arts)
 						callback(songlist.values,songlist.arts)
 					}
 				}
@@ -80,29 +80,29 @@ function getParams(callback){//add callback!!!
 function getlist(thisdate,callback){
 	var allsongs ={}
 	var albarts = {}
-	console.log('getlist starting ...')
+	//console.log('getlist starting ...')
 	dbx.filesListFolder({path: '/music'})
 	.then(function(response) { //list of all albums
-		console.log('getting list of files, starting async...')
+		//console.log('getting list of files, starting async...')
 		async.each(response.entries,
 		function(item,callback2){
 			albarts[item.name] = ""
-			console.log('Starting... async item: '+item.name)
+			//console.log('Starting... async item: '+item.name)
 			if(item['.tag'] == 'folder'){
-				console.log('this is a folder')
+				//console.log('this is a folder')
 				var album = {}
 				dbx.filesListFolder({path: '/music/'+item.name})
 				.then(function(response){ //list of songs in an album
-					console.log(item.name+' contains: '+response.entries);
-					console.log('getting links...')
+					//console.log(item.name+' contains: '+response.entries);
+					//console.log('getting links...')
 					async.each(response.entries,
 					function(item3,callback3){
-						console.log('getting link for: '+item3.name)
+						//console.log('getting link for: '+item3.name)
 						dbx.filesGetTemporaryLink({path: '/music/'+item.name+"/"+item3.name})
 						.then(function(response){
 							if(item3['name'] == 'thumb.jpg'){
 								albarts[item.name] = response.link
-								console.log(item3)
+								//console.log(item3)
 								callback3()
 							}else{
 								var temp = {}
@@ -119,7 +119,7 @@ function getlist(thisdate,callback){
 							console.error(error);
 						});;
 					},function(err){
-						console.log('async links getting is done')
+						//console.log('async links getting is done')
 						allsongs[item.name]=album
 						callback2();
 					});
@@ -132,8 +132,8 @@ function getlist(thisdate,callback){
 				callback2()
 			}
 		},function(err){
-			console.log('async done, allsongs is now: '+allsongs);
-			console.log(albarts)
+			//console.log('async done, allsongs is now: '+allsongs);
+			//console.log(albarts)
 			var newsonglist = {}
 			newsonglist['date'] = thisdate
 			newsonglist['values'] = allsongs
@@ -141,7 +141,7 @@ function getlist(thisdate,callback){
 			var liststring = JSON.stringify(newsonglist)
 			dbx.filesDelete({path: '/music/songlist.txt'}).then(function(){
 				dbx.filesUpload({contents: liststring, path: '/music/songlist.txt'}).then(function(){
-					console.log('callbacking, uploading file, liststring')
+					//console.log('callbacking, uploading file, liststring')
 					callback(allsongs,albarts)
 				}).catch(function(error) {
 					console.error(error);

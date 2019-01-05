@@ -100,6 +100,8 @@ body {
 	height: 0%;
 	z-index: 0;
 	pointer-events: none;
+	-webkit-transition: width 1s, height 1s, background 1s, top 1s, left 1s;
+	-o-transition: width 1s, height 1s, background 1s, top 1s, left 1s;
 	transition: width 1s, height 1s, background 1s, top 1s, left 1s;
 }
 #art:hover ~ .nav_color{
@@ -154,7 +156,8 @@ body {
 	width: 110%;
 	text-align: center;
 	z-index: -1;
-	filter: blur(10px);
+	-webkit-filter: blur(10px);
+	        filter: blur(10px);
 	overflow: hidden;
 	margin: -10px -5px;
 	padding: 10px;
