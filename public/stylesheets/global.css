@@ -1,173 +1,219 @@
-body {
-	font-family: 'Poppins', sans-serif;
-	margin: 0px;
-	padding: 0px;
+@media (min-width: 144px){
+	body {
+		font-family: 'Poppins', sans-serif;
+		margin: 0px;
+		padding: 0px;
+	}
+	.top{
+		position: relative;
+		width: 100%;
+		height: 700px;
+		padding: 0px;
+		margin: 0px;
+		text-align: center;
+	}
+	#color_bg{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		padding: 0px;
+		margin: 0px;
+		z-index: -1;
+	}
+	.color_all{
+		margin: 0px;
+		padding: 0px;
+		display: inline-block;
+		height: 100%;
+		width: 25%;
+	}
+	#color_1{	
+		background: #d3698c;
+	}
+	#color_2{
+		background: #69aad3;
+	}
+	#color_3{
+		background: #69d369;
+	}
+	#color_4{
+		background: #d3a269;
+	}
+	#top_title{
+		font-size: 170px;
+		margin: 0px;
+		padding: 0px;
+		color: white;
+	}
+	#overlay{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		padding: 0px;
+		margin: 0px;
+		background-image: url('../images/scratch.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: -1;
+		opacity: 0.7;
+	}
+	.nav{
+		text-align: center;
+		min-height: 200px;
+		position: relative;
+		background: #333;
+	}
+	.nav_div{
+		padding: 100px 0px;
+		width: 100%;
+		position: relative;
+	}
+	.nav_splash{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/splashes.png');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		pointer-events: none;
+		z-index: 1;
+	}
+	.main_button{
+		position: relative;
+		width: 200px;
+		padding: 10px;
+		display: inline-block;
+		font-size: 25px;
+		margin: 5px 5px;
+		background: white;
+		cursor: pointer;
+		z-index: 2;
+	}
+	.nav_color{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 0%;
+		z-index: 0;
+		pointer-events: none;
+		-webkit-transition: width 1s, height 1s, background 1s, top 1s, left 1s;
+		-o-transition: width 1s, height 1s, background 1s, top 1s, left 1s;
+		transition: width 1s, height 1s, background 1s, top 1s, left 1s;
+	}
+	#art:hover ~ .nav_color{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #d3698c;
+	}
+	#music:hover ~ .nav_color{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #69aad3;
+	}
+	#games:hover ~ .nav_color{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #69d369;
+	}
+	#shop:hover ~ .nav_color{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #d3a269;
+	}
+	.billboard{
+		width: 100%;
+		height: 400px;
+	}
+	.carousel-item{
+		position: relative;
+		width: 100%;
+		height: 700px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: #333;
+		color: white;
+	}
+	.bill_text::before{
+		content: "";
+		background: rgba(0,0,0,0.5);
+		position: absolute;
+		left: 0;
+		height: 150px;
+		bottom: 0%;
+		width: 110%;
+		text-align: center;
+		z-index: -1;
+		-webkit-filter: blur(10px);
+		filter: blur(10px);
+		overflow: hidden;
+		margin: -10px -5px;
+		padding: 10px;
+	}
+	.bill_text{
+		padding: 10px;
+		position: absolute;
+		height: 150px;
+		bottom: 0%;
+		width: 100%;
+		font-size: 20px;
+		text-align: center;
+	}
 }
-.top{
-	position: relative;
-	width: 100%;
-	height: 700px;
-	padding: 0px;
-	margin: 0px;
-	text-align: center;
-}
-#color_bg{
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	padding: 0px;
-	margin: 0px;
-	z-index: -1;
-}
-.color_all{
-	margin: 0px;
-	padding: 0px;
-	display: inline-block;
-	height: 100%;
-	width: 25%;
-}
-#color_1{	
-	background: #d3698c;
-}
-#color_2{
-	background: #69aad3;
-}
-#color_3{
-	background: #69d369;
-}
-#color_4{
-	background: #d3a269;
-}
-#top_title{
-	font-size: 170px;
-	margin: 0px;
-	padding: 0px;
-	color: white;
-}
-#overlay{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	padding: 0px;
-	margin: 0px;
-	background-image: url('../images/scratch.png');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	z-index: -1;
-	opacity: 0.7;
-}
-.nav{
-	text-align: center;
-	min-height: 200px;
-	position: relative;
-	background: #333;
-}
-.nav_div{
-	padding: 100px 0px;
-	width: 100%;
-	position: relative;
-}
-.nav_splash{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background-image: url('../images/splashes.png');
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	pointer-events: none;
-	z-index: 1;
-}
-.main_button{
-	position: relative;
-	width: 200px;
-	padding: 10px;
-	display: inline-block;
-	font-size: 25px;
-	margin: 5px 5px;
-	background: white;
-	cursor: pointer;
-	z-index: 2;
-}
-.nav_color{
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 100%;
-	height: 0%;
-	z-index: 0;
-	pointer-events: none;
-	-webkit-transition: width 1s, height 1s, background 1s, top 1s, left 1s;
-	-o-transition: width 1s, height 1s, background 1s, top 1s, left 1s;
-	transition: width 1s, height 1s, background 1s, top 1s, left 1s;
-}
-#art:hover ~ .nav_color{
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: #d3698c;
-}
-#music:hover ~ .nav_color{
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: #69aad3;
-}
-#games:hover ~ .nav_color{
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: #69d369;
-}
-#shop:hover ~ .nav_color{
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: #d3a269;
-}
-.billboard{
-	width: 100%;
-	height: 400px;
-}
-.carousel-item{
-	position: relative;
-	width: 100%;
-	height: 700px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: #333;
-	color: white;
-}
-.bill_text::before{
-	content: "";
-	background: rgba(0,0,0,0.5);
-	position: absolute;
-	left: 0;
-	height: 150px;
-	bottom: 0%;
-	width: 110%;
-	text-align: center;
-	z-index: -1;
-	-webkit-filter: blur(10px);
-	        filter: blur(10px);
-	overflow: hidden;
-	margin: -10px -5px;
-	padding: 10px;
-}
-.bill_text{
-	padding: 10px;
-	position: absolute;
-	height: 150px;
-	bottom: 0%;
-	width: 100%;
-	font-size: 20px;
-	text-align: center;
+@media (max-width: 1000px){
+	.top{
+		position: relative;
+		width: 100%;
+		height: 600px;
+		padding: 0px;
+		margin: 0px;
+		text-align: center;
+	}
+	#top_title{
+		font-size: 20em;
+		margin: 0px;
+		padding: 0px;
+		color: white;
+	}
+	.nav_div{
+		padding: 100px 0px;
+		width: 100%;
+		position: relative;
+	}
+	.main_button{
+		position: relative;
+		width: 500px;
+		padding: 10px;
+		font-size: 4em;
+		margin: 5px 5px;
+		background: white;
+		cursor: pointer;
+		z-index: 2;
+	}
+	.nav_splash{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/splashes.png');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		pointer-events: none;
+		z-index: 1;
+	}
 }
