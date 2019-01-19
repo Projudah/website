@@ -52,7 +52,7 @@
 			}
 		}
 		function show(elem){
-			var id = setInterval(showNext, 5);
+			var id = setInterval(showNext, 2);
 			function showNext(){
 				elem.style.display = 'block'
 				if(parseInt(elem.style.height) == 70 ){
@@ -63,7 +63,7 @@
 			}
 		}
 		function hide(elem){
-			var id = setInterval(hideNext, 5);
+			var id = setInterval(hideNext, 2);
 			function hideNext(){
 				if(parseInt(elem.style.height) == 0){
 					elem.style.display = 'none'
